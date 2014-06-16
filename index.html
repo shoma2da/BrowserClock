@@ -2,8 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ブランチ時計</title>
+    <title>ブラウザ時計</title>
+    <script type="text/javascript" src="./dateformat.js"></script>
 </head>
 <body>
+    <p id="clock">00:00:00</p>
+    <script text="text/javascript">
+var clock = document.getElementById("clock");
+
+var formatter = new DateFormat("HH:mm:ss");
+clock.innerText = formatter.format(new Date());
+
+setInterval(function() {
+    clock.innerText = formatter.format(new Date());
+}, 1000);
+    </script>
 </body>
 </html>
