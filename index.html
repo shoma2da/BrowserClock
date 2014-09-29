@@ -47,9 +47,11 @@ var clock = document.getElementById("clock");
 
 var formatter = new DateFormat("HH:mm:ss");
 clock.innerText = formatter.format(new Date());
+document.title = formatter.format(new Date());
 
 setInterval(function() {
     clock.innerText = formatter.format(new Date());
+    document.title = formatter.format(new Date());
 }, 1000);
     </script>
     <!-- /Original -->
